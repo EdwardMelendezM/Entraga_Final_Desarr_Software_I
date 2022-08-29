@@ -1,0 +1,60 @@
+.cabeza{
+    float: left;
+    list-style: none;
+    margin: 10px;
+}
+
+.titulo_universidad{
+    float:right;
+    padding-left: 50px;
+    font-size: 35px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.section_cabeza{
+    background: #e0e0e0;
+    margin: 0 0 1rem;
+    height: 10rem;
+    display: flex;
+  /* align-items por defecto tiene el valor `stretch` */
+    align-items: start;
+}
+
+.Titulo_Cuerpo{
+    color: black;
+    font-size: 40px;
+}
+.cuerpo{
+    border: 10px solid #521720;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+
+}
+.clearfix{
+    padding: 20px ;
+    background-color: white;
+}
+.form_dentro{
+    padding:0.4%;
+    color: white;
+    text-decoration:double;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #521720;
+    
+}
+.form_buttom{
+    background-color: #521720; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
