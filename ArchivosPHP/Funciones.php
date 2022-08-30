@@ -27,6 +27,9 @@ function ListaAlumnosTresColumnas($Lista)
     return $Nueva;
 }
 
+//---------------------------------------------------
+//   FUNCION PARA SEPARAR LOS NOMBRE EN 3 COLUMNAS
+//---------------------------------------------------
 function ListaDocentesTresColumnas($Lista)
 {
 $Nueva=array();
@@ -78,6 +81,9 @@ function ListaAlumnosDosColumnas($Lista)
     return $Nueva;
 }
 
+//---------------------------------------------------
+//   FUNCION PARA GENERAR LISTA TUTORADOS SEPARADO
+//---------------------------------------------------
 function ListaTutorados($Lista)
 {
     $Nueva=array();
@@ -205,7 +211,7 @@ function NormalizarNuevosAlumnosToTutotres($ListaTutorados,$Nuevos_Alumnos)
     // $Nueva[$PartUno]=$PartDos; 
     //  Lista[codigo] = nombre;
     $suma=0;
-    $docente="";
+    $Docente="";
     while($token != false) 
     {
         
@@ -292,5 +298,43 @@ function NormalizarNuevosAlumnosToTutotres($ListaTutorados,$Nuevos_Alumnos)
     }
     
     return $ListaCompleta;
+}
+
+#--------------------------------------------------------------
+#         FUNCION PARA RECIBIR Y CONVERTIR LOS CSV
+#--------------------------------------------------------------
+function convertir_csv_to_listas($name) # $name="Matriculados2022"
+{
+
+    $ListaFinal=""; # Aqui retornaremos el csv convertido
+    $file_Matriculados=$_FILES[$name]["name"];
+    $file_tmpMatriculados=$_FILES[$name]["tmp_name"];
+    $file_ErrorMatriculados=$_FILES[$name]["error"];
+
+    if($file_ErrorMatriculados==0)
+    {
+        $file_exMatricu=explode(".",$file_Matriculados);
+        $file_exMatricu=strtolower(end($file_exMatricu));
+        $file_newMatriculados=uniqid("",true).".txt";
+        $file_path = "TempFile/";
+    if (!file_exists($file_path))
+    {
+        mkdir($file_path, 0777, true);
+    }
+
+    $DireccionMatriculado="TempFile/".$file_newMatriculados;
+    move_uploaded_file($file_tmpMatriculados,$DireccionMatriculado);
+    }
+    
+    $archivo_matriculados=fopen($DireccionMatriculado,"r") or die("Error al abrir");
+    while(!feof($archivo_matriculados))
+    {
+        $traer = fgets($archivo_matriculados);
+        $saltodelinea=nl2br($traer);
+        $Palabra= utf8_encode(utf8_decode($saltodelinea));
+        $ListaFinal=$ListaFinal.$Palabra;
+    }
+    
+    return $ListaFinal;
 }
 ?>
