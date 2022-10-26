@@ -32,7 +32,7 @@ function ListaAlumnosTresColumnas($Lista)
 //---------------------------------------------------
 function ListaDocentesTresColumnas($Lista)
 {
-$Nueva=array();
+    $Nueva=array();
     $token = strtok($Lista, "\n\t");
     while($token != false) 
     {

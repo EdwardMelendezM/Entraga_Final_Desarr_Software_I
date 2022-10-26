@@ -1,60 +1,68 @@
-.principal{
-    font-size: 30px;
-    border: 10px solid #521720;
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-x: hidden;
+}
+.white{
+    padding: 15px;
+    background-color: #521720;
+}
+.cabeza{
+    padding:20px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 10px;
+}
+.titulo_universidad{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+.cabezal_div{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    }
+.cuerpo-p2{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #999;
-    font-size: 14px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.cabeza{
-    float: left;
-    list-style: none;
-    margin: 10px;
-}
+    flex-direction: column;
 
-.titulo_universidad{
-    float:right;
-    padding-left: 50px;
-    font-size: 35px;
-    text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.section_cabeza{
-    background: #e0e0e0;
-    margin: 0 0 1rem;
-    height: 10rem;
+.white{
+    padding: 15px;
+    background-color: #521720;
+}
+.principal{
     display: flex;
-  /* align-items por defecto tiene el valor `stretch` */
-    align-items: start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.clearfix{
-    padding: 20px ;
-    background-color: white;
-}
-
-.clearfix2{
-    padding: 10px ;
-    background-color: #999;
-}
-
-.funciones{
-    font-size: 18px;
-}
-.buttom{
-    background-color:#521720;
-    color: white;
-    padding: 10px 10px;
-    text-decoration: none;
-}
-.form_buttom{
-    background-color: #521720; /* Green */
-    border: none;
-    color: white;
-    padding: 5px 10px;
+.funciones {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
+    gap: 10px;
+}
+
+.funciones a{
+    background-color: #521720;
+    border-radius: 3px;
+    padding: 10px;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    color: white;
+}
+
+.form_buttom{
+    height: 50px;
+}
+.form_buttom:hover{
+    background-color:aqua;
+    color:black;
 }

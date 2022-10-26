@@ -31,7 +31,6 @@
                     <?php echo "<br><br>";
                             session_start();
                             $ListaAlumnos=$_SESSION["listaDeNoConsiderados"];
-
                             include("Funciones.php");
                             $i=1;
                             foreach ($ListaAlumnos as $key => $value) {
